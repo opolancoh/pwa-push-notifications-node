@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWA Push Notifications</title>
+
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <h1>PWA Push Notifications App</h1>
+    <div id="appMessage">Checking for PWA features ...</div>
+    <ul id="appStatus">
+      <li><b>Service Worker supported: </b><span id="swSupported">...</span></li>
+      <li><b>Service Worker registered: </b><span id="swRegistered">...</span></li>
+      <li><b>Push notifications supported: </b><span id="pmSupported">...</span></li>
+      <li><b>Notification permission: </b><span id="notificationPermission">...</span></li>
+      <li><b>Push notification subscription status: </b><span id="pmSubscriptionStatus">...</span></li>
+    </ul>
+        <div id="pm-subscribe" style="display: none">
+        <button onclick="onSubscribeToPushNotifications()">Subscribe to push notifications</button>
+        <ul>
+            <li><b>Push notification subscription status: </b><span id="subscribing-status">...</span></li>
+            <li><b>Send push subscription to server: </b><span id="send-to-server">...</span></li>
+            <li><b>Ready to receive push notifications: </b><span id="push-ready">...</span></li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
